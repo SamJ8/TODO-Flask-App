@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #58cae680;
+    background-color: #00c5ab;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,8 @@ body {
     max-width: 750px;
     text-align: center;
     overflow-y: auto; 
-    max-height: 80vh; 
+    max-height: 80vh;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -213,9 +214,6 @@ form .button-container {
 
 /* SCROLL TO TOP BUTTON */
 
-html {
-    scroll-behavior: smooth;
-}
 
 .back-to-top {
     position: fixed;
@@ -224,21 +222,23 @@ html {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #a003f4;
+    background-color: #007ac5;
     border-radius: 0.5rem;
     padding: 1px;
     text-decoration: none;
     transition: 0.2s ease-out;
+    
 }
 
 .back-to-top span {
     color: #fff;
     font-size: 3rem;
     transition: 0.2s ease-out;
+    
 }
 
 .back-to-top:hover {
-    background-color: #a003f495;
+    background-color: #261bbc8f;
 }
 
 .back-to-top:hover span {
