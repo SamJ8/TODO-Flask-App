@@ -1,6 +1,6 @@
-/* Container styles */
+
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -9,10 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden; /* Prevent body from scrolling */
+    overflow: hidden; 
 }
 
-/* Container styles */
+
+
 .container {
     background-color: #fff;
     padding: 30px;
@@ -21,8 +22,8 @@ body {
     width: 90%;
     max-width: 750px;
     text-align: center;
-    overflow-y: auto; /* Allow scrolling within the container */
-    max-height: 80vh; /* Limit the height to ensure scrolling */
+    overflow-y: auto; 
+    max-height: 80vh; 
 }
 
 h1 {
@@ -43,12 +44,14 @@ form div {
 }
 
 form label, form select {
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     margin-bottom: 10px;
     color: #333;
 }
 
 form input[type="text"], form select {
+    font-family: "Montserrat", sans-serif;
     padding: 10px;
     font-size: 16px;
     border: 2px solid #ddd;
@@ -57,7 +60,7 @@ form input[type="text"], form select {
     max-width: 400px;
     margin-bottom: 10px;
     transition: border-color 0.3s ease;
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    box-sizing: border-box; 
 }
 
 form input[type="text"]:focus, form select:focus {
@@ -66,6 +69,7 @@ form input[type="text"]:focus, form select:focus {
 }
 
 form button, .ui.button {
+    font-family: "Montserrat", sans-serif;
     padding: 8px 20px;
     border: none;
     background-color: #5cb85c;
@@ -73,10 +77,10 @@ form button, .ui.button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    text-decoration: none; /* Remove underline for the link */
-    display: inline-block; /* Ensure it's displayed as an inline-block element */
+    text-decoration: none; 
+    display: inline-block; 
     transition: background-color 0.3s ease;
-    margin: 5px; /* Add margin for spacing between buttons */
+    margin: 5px; 
 }
 
 form button:hover, .ui.button:hover {
@@ -182,7 +186,7 @@ form .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Add space between buttons */
+    gap: 10px; 
 }
 
 /* New styles for header and task container */
@@ -196,14 +200,15 @@ form .button-container {
 }
 
 /* Styles for task details */
+
 .task-container {
-    font-weight: normal; /* Ensure task details don't appear bold */
+    font-weight: normal;
 }
 
 .task-container p {
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Add ellipsis for overflow text */
-    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
 }
 
 /* SCROLL TO TOP BUTTON */

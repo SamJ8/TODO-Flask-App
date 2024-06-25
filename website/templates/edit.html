@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
+<!-- EXTENDING MY BOILER PLATE TO THIS PAGE -->
+
 {% block content %}
 
     <div class="container">
         <h1>Edit Task</h1>
-        <form action="{{ url_for('my_view.edit', todo_id=todo.id) }}" method="POST">
+        <form action="{{ url_for('my_view.edit', todo_id=todo.id) }}" method="POST"> <!-- THIS WILL POST THE UPDATED TASKS-->
             <div>
                 <input type="text" id="task" name="task" value="{{ todo.task }}" placeholder="Edit task">
                 <select required name="category" id="category" class="form-select">
@@ -13,12 +15,12 @@
                     <option value="Home">Home</option>
                     <option value="Personal">Personal</option>
                     <option value="Health">Health</option>
-                    <option value="Other">Other</option>
+                    <option value="Other">Other</option> <!-- ALL OPTIONS FOR THE USER TO PICK WHAT CATEGORY THEIR TASK FALLS INTO-->
                   </select>
             </div>
             <div class="button-container">
-                <button type="submit" class="ui button green">Update</button>
-                <a class="ui button purple" href="{{ url_for('my_view.home') }}">Return</a>
+                <button class="ui button green" type="submit" >Update</button> <!-- CLICKING UPDATE WILL UPDATE THE INFORMATION-->
+                <a class="ui button purple" href="{{ url_for('my_view.home') }}">Return</a> <!-- PRESSING RETURN WILL TAKE THEM BACK TO HOMEPAGE-->
             </div>
         </form>
     </div>
