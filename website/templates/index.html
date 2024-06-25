@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <div class="container">
+        <section id="top_of_page">
+        <h1>To Do List</h1>
+        
+        <form action="/add" method="post">
+            <div>
+                <label>Just do it!</label>
+                <input type="text" name="task" placeholder="Enter a Task..." required>
+                <select required name="category" id="category" class="form-select">
+                    <option value="" disabled selected hidden>Choose category...</option>
+                    <option value="Work">Work</option>
+                    <option value="Home">Home</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Health">Health</option>
+                    <option value="Other">Other</option>
+                  </select>
+                <button type="submit" class="ui button green">Add Task</button>
+                {% if message %}
+                <p>{{message}}</p>
+                {% endif %}
+            </div>
+        </form>
+    </section>
+        <hr>
+
+        {% for todo in todo_list %}
+        <div class="ui segment">
+            <div class="header-container">
+            <p>#</p>
+            <p>TASK</p>
+            <p>CATEGORY</p>
+            <p>DATE</p>
+            </div>
+            <div class="task-container">
+            <p>{{todo.id}}</p>
+            <p>{{todo.task}}</p>
+            <p>{{todo.category}}</p>
+            <p>{{todo.date.strftime("%d/%m/%y")}}</p>
+            </div>
+            {% if todo.complete == False %}
+            <span class="ui gray label">&#10008;</span>
+            {% else %}
+            <span class="ui green label">&#10004</span>
+            {% endif %}
+
+            <a class="ui blue button" href="{{ url_for('my_view.update', todo_id = todo.id) }}">Update</a>
+            <a class="ui yellow button" href="{{ url_for('my_view.edit', todo_id = todo.id) }}">Edit</a>
+            <a class="ui red button" href="{{ url_for('my_view.delete', todo_id = todo.id) }}">Delete</a>
+        </div>
+        
+        {% endfor %}
+        
+        <a href="#top_of_page" class="back-to-top">
+            <span class="material-icons">keyboard_arrow_up</span>
+        </a>
+    </div>
+    
+    {% endblock %}

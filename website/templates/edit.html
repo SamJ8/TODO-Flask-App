@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Edit Task</h1>
+        <form action="{{ url_for('my_view.edit', todo_id=todo.id) }}" method="POST">
+            <div>
+                <input type="text" id="task" name="task" value="{{ todo.task }}" placeholder="Edit task">
+                <select required name="category" id="category" class="form-select">
+                    <option value="" disabled selected hidden>Choose category...</option>
+                    <option value="Work">Work</option>
+                    <option value="Home">Home</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Health">Health</option>
+                    <option value="Other">Other</option>
+                  </select>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="ui button green">Update</button>
+                <a class="ui button purple" href="{{ url_for('my_view.home') }}">Return</a>
+            </div>
+        </form>
+    </div>
+
+    {% endblock %}

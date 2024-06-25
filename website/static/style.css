@@ -1,0 +1,241 @@
+/* Container styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #58cae680;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent body from scrolling */
+}
+
+/* Container styles */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 750px;
+    text-align: center;
+    overflow-y: auto; /* Allow scrolling within the container */
+    max-height: 80vh; /* Limit the height to ensure scrolling */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form label, form select {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+form input[type="text"], form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+form input[type="text"]:focus, form select:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+form button, .ui.button {
+    padding: 8px 20px;
+    border: none;
+    background-color: #5cb85c;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none; /* Remove underline for the link */
+    display: inline-block; /* Ensure it's displayed as an inline-block element */
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+form button:hover, .ui.button:hover {
+    background-color: #4cae4c;
+}
+
+hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 2px solid #ddd;
+}
+
+/* Task list button styles */
+
+.ui.segment {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.ui.segment:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.ui.segment p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.ui.label {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ui.label.gray {
+    background-color: #d4d4d4;
+    color: #333;
+}
+
+.ui.label.green {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.ui.button {
+    padding: 8px 12px;
+    margin: 5px 0 0 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ui.button.blue {
+    background-color: #5bc0de;
+    color: #fff;
+}
+
+.ui.button.blue:hover {
+    background-color: #31b0d5;
+}
+
+.ui.button.yellow {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+.ui.button.yellow:hover {
+    background-color: #ec971f;
+}
+
+.ui.button.red {
+    background-color: #e01109;
+    color: #fff;
+}
+
+.ui.button.red:hover {
+    background-color: #e01009c0;
+}
+
+.ui.button.purple {
+    background-color: #237fb9;
+    color: #fff;
+    padding: 5px 14px;
+}
+
+.ui.button.puple:hover {
+    background-color: #237fb99b;
+}
+
+form .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add space between buttons */
+}
+
+/* New styles for header and task container */
+.header-container, .task-container {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 100px;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Styles for task details */
+.task-container {
+    font-weight: normal; /* Ensure task details don't appear bold */
+}
+
+.task-container p {
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* SCROLL TO TOP BUTTON */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a003f4;
+    border-radius: 0.5rem;
+    padding: 1px;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top span {
+    color: #fff;
+    font-size: 3rem;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+    background-color: #a003f495;
+}
+
+.back-to-top:hover span {
+    transform: translateY(-4px);
+}
