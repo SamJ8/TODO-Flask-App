@@ -20,7 +20,9 @@
                     <option value="Health">Health</option>
                     <option value="Other">Other</option>
                   </select>
-                <button class="ui button green" type="submit" >Add Task</button>
+                <button class="ui button green" type="submit" ><span class="material-symbols-rounded">
+                    add
+                    </span></button>
                 {% if message %} <!-- MESSAGE TO DISPLAY ONCE TASK HAS BEEN ADDED-->
                 <p>{{message}}</p>
                 {% endif %}
@@ -44,14 +46,24 @@
             <p>{{todo.date.strftime("%d/%m/%y")}}</p>
             </div>
             {% if todo.complete == False %}
-            <span class="ui gray label">&#10008;</span> <!-- MARKING THE TASK DONE AS COMPLETE-->
+            <span class="ui gray label">
+                <span class="material-symbols-rounded">close</span>
+            </span> <!-- MARKING THE TASK DONE AS COMPLETE-->
             {% else %}
-            <span class="ui green label">&#10004</span>
+            <span class="ui green label">
+                <span class="material-symbols-rounded">check</span>
+            </span>
             {% endif %}
 
-            <a class="ui blue button" href="{{ url_for('my_view.update', todo_id = todo.id) }}">Update</a>
-            <a class="ui yellow button" href="{{ url_for('my_view.edit', todo_id = todo.id) }}">Edit</a>
-            <a class="ui red button" href="{{ url_for('my_view.delete', todo_id = todo.id) }}">Delete</a>
+            <a class="ui blue button" href="{{ url_for('my_view.update', todo_id = todo.id) }}">
+                <span class="material-symbols-rounded">update</span>
+            </a>
+            <a class="ui yellow button" href="{{ url_for('my_view.edit', todo_id=todo.id) }}">
+                <span class="material-symbols-rounded">edit</span>
+            </a>
+            <a class="ui red button"  href="{{ url_for('my_view.delete', todo_id = todo.id) }}">
+                <span class="material-symbols-rounded">delete</span>
+            </a>
         </div>
         
         {% endfor %}

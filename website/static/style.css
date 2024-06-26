@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #00c5ab;
+    background-color: #03eece;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,11 +129,35 @@ hr {
 .ui.label.gray {
     background-color: #d4d4d4;
     color: #333;
+    padding: 8px 12px;
+    margin: 5px 0 0 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+
 }
+
 
 .ui.label.green {
     background-color: #5cb85c;
     color: #fff;
+    padding: 8px 12px;
+    margin: 5px 0 0 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
 }
 
 .ui.button {
@@ -144,6 +168,10 @@ hr {
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ui.button.blue {
@@ -176,7 +204,16 @@ hr {
 .ui.button.purple {
     background-color: #237fb9;
     color: #fff;
-    padding: 5px 14px;
+    padding: 8px 12px;
+    margin: 5px 0 0 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ui.button.puple:hover {

@@ -19,8 +19,12 @@
                   </select>
             </div>
             <div class="button-container">
-                <button class="ui button green" type="submit" >Update</button> <!-- CLICKING UPDATE WILL UPDATE THE INFORMATION-->
-                <a class="ui button purple" href="{{ url_for('my_view.home') }}">Return</a> <!-- PRESSING RETURN WILL TAKE THEM BACK TO HOMEPAGE-->
+                <button class="ui button green" type="submit" ><span class="material-symbols-rounded">
+                    add
+                    </span></button> <!-- CLICKING UPDATE WILL UPDATE THE INFORMATION-->
+                <a class="ui button purple" href="{{ url_for('my_view.home') }}"><span class="material-symbols-rounded">
+                    arrow_back
+                    </span></a> <!-- PRESSING RETURN WILL TAKE THEM BACK TO HOMEPAGE-->
             </div>
         </form>
     </div>
