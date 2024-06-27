@@ -168,7 +168,6 @@ hr {
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -219,6 +218,7 @@ hr {
 .ui.button.puple:hover {
     background-color: #237fb99b;
 }
+
 
 form .button-container {
     display: flex;
@@ -280,4 +280,65 @@ form .button-container {
 
 .back-to-top:hover span {
     transform: translateY(-4px);
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Set width to 100% to match the container */
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Set width to 100% to match the container */
+    justify-content: center; /* Center items horizontally */
+}
+
+#filter_category {
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Set width to 100% */
+    max-width: 400px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+
+.filter-label {
+    background-color: #939393;
+    color: #fff;
+    padding: 8px 12px;
+    margin: 5px 0 0 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ui.filter-label {
+        padding: 8px 12px;
+        margin: 5px 0 0 5px;
+        font-size: 14px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.ui.filter-label:hover {
+    background-color: #575757;
 }

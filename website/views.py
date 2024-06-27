@@ -9,7 +9,11 @@ def home():
     todo_list = Todo.query.all()
     print(todo_list)
     message = request.args.get('message', None)
-    return render_template("index.html", todo_list=todo_list, message = message)
+    filter = request.args.get('filter_category') #! added a filter button so I can display the category selected.
+    if filter:
+        todo_list = Todo.query.filter_by(category=filter).all()
+    
+    return render_template("index.html", todo_list=todo_list, message=message)
 
 @my_view.route("/add", methods=["POST"])
 def add():
