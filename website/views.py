@@ -42,7 +42,8 @@ def delete(todo_id):
     todo = Todo.query.filter_by(id=todo_id).first()
     db.session.delete(todo)
     db.session.commit()
-    return redirect(url_for("my_view.home"))
+    message = "Task deleted."
+    return redirect(url_for("my_view.home", message=message))
 
 @my_view.route("/edit/<todo_id>", methods = ["GET", "POST"]) #! New route created to edit tasks using both the GET and POST methods.
 def edit(todo_id):
